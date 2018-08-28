@@ -12,4 +12,4 @@ const reducerBuilder = (behaviours, defaultState = {}) => {
   };
 };
 
-module.exports = reducerBuilder;
+export default reducerBuilder;
