@@ -1,0 +1,24 @@
+{
+  "name": "redux-friends",
+  "version": "0.0.0",
+  "description": "a set of helpers / builders for redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyphaene/redux-friends.git"
+  },
+  "keywords": [
+    "redux",
+    "helpers",
+    "builders"
+  ],
+  "author": "maximilien garenne <maximilien.garenne@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hyphaene/redux-friends/issues"
+  },
+  "homepage": "https://github.com/hyphaene/redux-friends#readme"
+}
