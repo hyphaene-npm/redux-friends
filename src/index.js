@@ -1,7 +1,4 @@
-const reducerBuilder = require('./reducerBuilder.js');
-const actionBuilder = require('./reducerBuilder.js');
+import reducerBuilder from './reducerBuilder.js';
+import actionBuilder from './actionBuilder.js';
 
-module.exports = {
-  reducerBuilder,
-  actionBuilder
-};
+export { reducerBuilder, actionBuilder };
