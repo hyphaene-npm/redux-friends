@@ -1,45 +1,45 @@
 {
-  "name": "redux-friends",
-  "version": "0.0.2",
-  "description": "a set of helpers / builders for redux",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
-    "patch": "versionifier patch",
-    "minor": "versionifier minor",
-    "major": "versionifier major",
-    "ver": "versionifier default"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hyphaene/redux-friends.git"
-  },
-  "keywords": [
-    "redux",
-    "helpers",
-    "builders"
-  ],
-  "author": "maximilien garenne <maximilien.garenne@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hyphaene/redux-friends/issues"
-  },
-  "homepage": "https://github.com/hyphaene/redux-friends#readme",
-  "dependencies": {
-    "redux-actions": "^2.6.1"
-  },
-  "devDependencies": {
-    "versionifier": "^1.3.4",
-    "webpack": "^4.17.1",
-    "webpack-cli": "^3.1.0"
-  },
-  "versionifier": {
-    "commitIfOnlyPackageJsonInStage": false,
-    "commitIfMultipleFilesInStage": true,
-    "push": true,
-    "commitMessage": "Updated package.json to version @@",
-    "remoteRepo": "origin",
-    "publish": true
-  }
+    "name": "redux-friends",
+    "version": "0.0.3",
+    "description": "a set of helpers / builders for redux",
+    "main": "dist/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack --mode production",
+        "patch": "versionifier patch",
+        "minor": "versionifier minor",
+        "major": "versionifier major",
+        "ver": "versionifier default"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hyphaene/redux-friends.git"
+    },
+    "keywords": [
+        "redux",
+        "helpers",
+        "builders"
+    ],
+    "author": "maximilien garenne <maximilien.garenne@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/hyphaene/redux-friends/issues"
+    },
+    "homepage": "https://github.com/hyphaene/redux-friends#readme",
+    "dependencies": {
+        "redux-actions": "^2.6.1"
+    },
+    "devDependencies": {
+        "versionifier": "^1.3.4",
+        "webpack": "^4.17.1",
+        "webpack-cli": "^3.1.0"
+    },
+    "versionifier": {
+        "commitIfOnlyPackageJsonInStage": false,
+        "commitIfMultipleFilesInStage": true,
+        "push": true,
+        "commitMessage": "Updated package.json to version @@",
+        "remoteRepo": "origin",
+        "publish": true
+    }
 }
