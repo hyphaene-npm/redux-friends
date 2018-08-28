@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/hyphaene/redux-friends/issues"
   },
-  "homepage": "https://github.com/hyphaene/redux-friends#readme"
+  "homepage": "https://github.com/hyphaene/redux-friends#readme",
+  "dependencies": {
+    "redux-actions": "^2.6.1"
+  }
 }
