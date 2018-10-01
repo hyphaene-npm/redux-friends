@@ -34,7 +34,8 @@
         "redux-actions": "^2.6.1",
         "redux-devtools-extension": "^2.13.5",
         "redux-persist": "^5.10.0",
-        "redux-thunk": "^2.3.0"
+        "redux-thunk": "^2.3.0",
+        "redux-types": "^2.0.3"
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
