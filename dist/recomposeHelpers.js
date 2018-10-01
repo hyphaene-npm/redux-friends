@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.withToggle = exports.toggleHandler = exports.styleTabHandler = exports.withStateActiveTab = undefined;
+exports.withToggle = exports.toggleHandler = exports.styleTabHandler = exports.withStateOpen = exports.withStateActiveTab = undefined;
 
 var _classnames = require('classnames');
 
@@ -16,6 +16,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var withStateActiveTab = exports.withStateActiveTab = function withStateActiveTab(defaultTab) {
 	return (0, _recompose.withState)('activeTab', 'setActiveTab', defaultTab);
 };
+var withStateOpen = exports.withStateOpen = (0, _recompose.withState)('isOpen', 'setIsOpen', false);
 
 var styleTabHandler = exports.styleTabHandler = function styleTabHandler(props) {
 	return function (tabId) {
