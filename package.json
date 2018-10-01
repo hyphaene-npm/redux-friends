@@ -1,6 +1,6 @@
 {
     "name": "redux-friends",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "description": "a set of helpers / builders for redux",
     "main": "dist/index.js",
     "scripts": {
