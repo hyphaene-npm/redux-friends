@@ -3,4 +3,20 @@ import actionBuilder from './actionBuilder.js';
 import getStore from './storeBuilder.js';
 import getTypes from './typesBuilder';
 
-export { reducerBuilder, actionBuilder, getStore, getTypes };
+import {
+	withStateActiveTab,
+	styleTabHandler,
+	toggleHandler,
+	withToggle,
+} from './recomposeHelpers.js';
+
+export {
+	reducerBuilder,
+	actionBuilder,
+	getStore,
+	getTypes,
+	withStateActiveTab,
+	styleTabHandler,
+	toggleHandler,
+	withToggle,
+};
