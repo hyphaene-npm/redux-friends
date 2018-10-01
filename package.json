@@ -28,8 +28,10 @@
     },
     "homepage": "https://github.com/hyphaene/redux-friends#readme",
     "dependencies": {
+        "classnames": "^2.2.6",
         "history": "^4.7.2",
         "react-router-redux": "^4.0.8",
+        "recompose": "^0.30.0",
         "redux": "^4.0.0",
         "redux-actions": "^2.6.1",
         "redux-devtools-extension": "^2.13.5",
