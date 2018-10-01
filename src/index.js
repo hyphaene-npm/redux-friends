@@ -8,6 +8,7 @@ import {
 	styleTabHandler,
 	toggleHandler,
 	withToggle,
+	withStateOpen,
 } from './recomposeHelpers.js';
 
 export {
@@ -19,4 +20,5 @@ export {
 	styleTabHandler,
 	toggleHandler,
 	withToggle,
+	withStateOpen,
 };
