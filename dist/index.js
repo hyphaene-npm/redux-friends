@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.withToggle = exports.toggleHandler = exports.styleTabHandler = exports.withStateActiveTab = exports.getTypes = exports.getStore = exports.actionBuilder = exports.reducerBuilder = undefined;
+exports.withStateOpen = exports.withToggle = exports.toggleHandler = exports.styleTabHandler = exports.withStateActiveTab = exports.getTypes = exports.getStore = exports.actionBuilder = exports.reducerBuilder = undefined;
 
 var _reducerBuilder = require('./reducerBuilder.js');
 
@@ -33,3 +33,4 @@ exports.withStateActiveTab = _recomposeHelpers.withStateActiveTab;
 exports.styleTabHandler = _recomposeHelpers.styleTabHandler;
 exports.toggleHandler = _recomposeHelpers.toggleHandler;
 exports.withToggle = _recomposeHelpers.withToggle;
+exports.withStateOpen = _recomposeHelpers.withStateOpen;
