@@ -9,6 +9,7 @@ import {
 	toggleHandler,
 	withToggle,
 	withStateOpen,
+	withData,
 } from './recomposeHelpers.js';
 
 export {
@@ -21,4 +22,5 @@ export {
 	toggleHandler,
 	withToggle,
 	withStateOpen,
+	withData,
 };
