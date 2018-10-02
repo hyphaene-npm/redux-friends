@@ -3,27 +3,27 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getTypes = exports.getStore = exports.actionBuilder = exports.reducerBuilder = undefined;
+exports.createTypes = exports.createStore = exports.createAction = exports.createReducer = undefined;
 
-var _reducerBuilder = require('./reducerBuilder.js');
+var _createReducer = require('./createReducer.js');
 
-var _reducerBuilder2 = _interopRequireDefault(_reducerBuilder);
+var _createReducer2 = _interopRequireDefault(_createReducer);
 
-var _actionBuilder = require('./actionBuilder.js');
+var _createAction = require('./createAction.js');
 
-var _actionBuilder2 = _interopRequireDefault(_actionBuilder);
+var _createAction2 = _interopRequireDefault(_createAction);
 
-var _storeBuilder = require('./storeBuilder.js');
+var _createStore = require('./createStore.js');
 
-var _storeBuilder2 = _interopRequireDefault(_storeBuilder);
+var _createStore2 = _interopRequireDefault(_createStore);
 
-var _typesBuilder = require('./typesBuilder');
+var _createTypes = require('./createTypes.js');
 
-var _typesBuilder2 = _interopRequireDefault(_typesBuilder);
+var _createTypes2 = _interopRequireDefault(_createTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.reducerBuilder = _reducerBuilder2.default;
-exports.actionBuilder = _actionBuilder2.default;
-exports.getStore = _storeBuilder2.default;
-exports.getTypes = _typesBuilder2.default;
+exports.createReducer = _createReducer2.default;
+exports.createAction = _createAction2.default;
+exports.createStore = _createStore2.default;
+exports.createTypes = _createTypes2.default;
