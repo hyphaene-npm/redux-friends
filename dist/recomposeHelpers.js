@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.withToggle = exports.toggleHandler = exports.styleTabHandler = exports.withStateOpen = exports.withStateActiveTab = undefined;
+exports.withToggle = exports.toggleHandler = exports.styleTabHandler = exports.withData = exports.withStateOpen = exports.withStateActiveTab = undefined;
 
 var _classnames = require('classnames');
 
@@ -17,6 +17,7 @@ var withStateActiveTab = exports.withStateActiveTab = function withStateActiveTa
 	return (0, _recompose.withState)('activeTab', 'setActiveTab', defaultTab);
 };
 var withStateOpen = exports.withStateOpen = (0, _recompose.withState)('isOpen', 'setIsOpen', false);
+var withData = exports.withData = (0, _recompose.withState)('data', 'setData', null);
 
 var styleTabHandler = exports.styleTabHandler = function styleTabHandler(props) {
 	return function (tabId) {
