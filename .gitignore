@@ -60,7 +60,5 @@ typings/
 # next.js build output
 .next
 .npmrc
-<<<<<<< HEAD
 dist
-=======
->>>>>>> 03369fb7c8d5cd3aef468ed6a4c435fe6ca2fbce
+build
