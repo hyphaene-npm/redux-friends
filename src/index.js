@@ -3,5 +3,15 @@ import { createAction, createActionWithMeta } from './createAction.js';
 import createStore from './createStore.js';
 import createTypes from './createTypes.js';
 import { PAGES, DATA } from './constants';
+import assignPayloadToKey from './assignPayloadToKey';
 
-export { createReducer, createAction, createActionWithMeta, createStore, createTypes, PAGES, DATA };
+export {
+	createReducer,
+	createAction,
+	createActionWithMeta,
+	createStore,
+	createTypes,
+	PAGES,
+	DATA,
+	assignPayloadToKey,
+};
