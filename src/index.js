@@ -6,6 +6,7 @@ import { PAGES, DATA } from './constants';
 import assignPayloadToKey from './assignPayloadToKey';
 import assignPayloadToState from './assignPayloadToState';
 import addPayloadToState from './addPayloadToState';
+import assignPayloadToNestedKey from './assignPayloadToNestedKey';
 
 export {
 	createReducer,
@@ -18,4 +19,5 @@ export {
 	assignPayloadToKey,
 	assignPayloadToState,
 	addPayloadToState,
+	assignPayloadToNestedKey,
 };
