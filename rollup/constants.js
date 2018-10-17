@@ -20,5 +20,6 @@ export const react = 'react';
 export const PropTypes = 'prop-types';
 export const reactDom = 'react-dom';
 
+export const globals = {};
 export const external = [react, reactDom, PropTypes];
 export const mainInput = 'src/index.js';
