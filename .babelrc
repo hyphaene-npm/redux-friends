@@ -2,10 +2,26 @@
 	"ignore": ["node_modules/**"],
 	"env": {
 		"dev": {
-			"presets": [["env", { "modules": false }]]
+			"presets": [
+				[
+					"babel-preset-env",
+					{
+						"modules": false
+					}
+				]
+			],
+			"plugins": [["transform-object-rest-spread"], ["external-helpers"]]
 		},
 		"test": {
-			"presets": [["env", { "modules": "commonjs" }]]
+			"presets": [
+				[
+					"babel-preset-env",
+					{
+						"modules": "commonjs"
+					}
+				]
+			],
+			"plugins": [["transform-object-rest-spread"], ["external-helpers"]]
 		}
 	}
 }

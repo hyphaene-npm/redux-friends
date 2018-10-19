@@ -1,4 +1,4 @@
-const { handleActions } = require('redux-actions');
+import { handleActions } from 'redux-actions';
 
 const reducerBuilder = (behaviours, defaultState = {}) => {
   const handler = handleActions(behaviours, defaultState);

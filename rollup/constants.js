@@ -16,10 +16,38 @@ export const plugins = [
 	commonjs(),
 	filesize(),
 ];
-export const react = 'react';
-export const PropTypes = 'prop-types';
-export const reactDom = 'react-dom';
+const react = 'react';
+const PropTypes = 'prop-types';
+const reactDom = 'react-dom';
+const thunk = 'redux-thunk';
+const reduxActions = 'redux-actions';
+const reduxTypes = 'redux-types';
+const reduxPersist = 'redux-persist';
+const redux = 'redux';
+const reduxDevtoolsExtension = 'redux-devtools-extension';
+const createHistory = 'history/createHashHistory';
+const reactRouterRedux = 'react-router-redux';
+const autoMergeLevel2 = 'redux-persist/lib/stateReconciler/autoMergeLevel2';
+const storage = 'redux-persist/lib/storage';
 
-export const globals = {};
-export const external = [react, reactDom, PropTypes];
+export const external = [
+	react,
+	reactDom,
+	PropTypes,
+	thunk,
+	reduxPersist,
+	reduxActions,
+	redux,
+	reduxDevtoolsExtension,
+	createHistory,
+	reactRouterRedux,
+	autoMergeLevel2,
+	storage,
+	reduxTypes,
+];
+
+export const globals = external.reduce((acc, current) => {
+	acc[current] = current;
+	return acc;
+}, {});
 export const mainInput = 'src/index.js';
