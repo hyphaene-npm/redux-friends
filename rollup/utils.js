@@ -10,6 +10,6 @@ export const setConfig = (input, output) => ({
 export const formatBuilder = format => file => ({
 	file,
 	format,
-	name: 'Whatson',
+	name: 'Hyphaene',
 	globals,
 });
