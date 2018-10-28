@@ -184,6 +184,7 @@ is equivalent to :
 ```javascript
 const behaviors = {
 	[TYPES[SET_IS_ONLINE]]: (state, { payload }) => payload
+};
 ```
 ### spreadPayloadToState
 ```javascript
