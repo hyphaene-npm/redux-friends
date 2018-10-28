@@ -21,37 +21,6 @@ yarn add redux-friends
 ```
 
 
-## Usage
-
-
-this package is bundled with rollup, and all dependencies are declared and treated as external dependencies to minimize the bundle size.
-
-You'll need :
-
-[redux]()
-
-[history]()
-
-[redux-persist]()
-
-[react-router-redux]()
-
-[redux-devtools-extension]()
-
-[redux-thunk]()
-
-[redux-types]()
-
-[redux-actions]()
-
-[redux-persist]()
-
-[redux-persist]()
-
-[redux-persist]()
-
-[redux-persist]()
-
 ## Types
 
 In constants.js
