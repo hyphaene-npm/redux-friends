@@ -1,4 +1,4 @@
-#
+
 
 # Purpose
 
@@ -20,6 +20,37 @@ or
 yarn add redux-friends
 ```
 
+
+## Usage
+
+
+this package is bundled with rollup, and all dependencies are declared and treated as external dependencies to minimize the bundle size.
+
+You'll need :
+
+[redux]()
+
+[history]()
+
+[redux-persist]()
+
+[react-router-redux]()
+
+[redux-devtools-extension]()
+
+[redux-thunk]()
+
+[redux-types]()
+
+[redux-actions]()
+
+[redux-persist]()
+
+[redux-persist]()
+
+[redux-persist]()
+
+[redux-persist]()
 
 ## Types
 
@@ -145,7 +176,7 @@ const behaviors = {
 
 ```javascript
 const behaviors = {
-	[TYPES[ADD_ITEM]]: addPayloadToKey(LOADED),
+	[TYPES[SET_LOADED]]: addPayloadToKey(LOADED),
 };
 ```
 is equivalent to :
@@ -157,5 +188,50 @@ const behaviors = {
 });
 ```
 ### addPayloadToNestedKey
+```javascript
+const behaviors = {
+	[TYPES[SET_PROFIL_NAME]]: addPayloadToNestedKey(PROFIL, NAME),
+};
+```
+is equivalent to :
+```javascript
+const behaviors = {
+	[TYPES[SET_PROFIL_NAME]]: (state, { payload }) => ({
+	...state,
+	[PROFIL]: {
+		...state[key],
+		[NAME]: payload,
+	},
+});
+```
 ### assignPayloadToState
+```javascript
+const behaviors = {
+	[TYPES[SET_IS_ONLINE]]: assignPayloadToState,
+};
+```
+is equivalent to :
+```javascript
+const behaviors = {
+	[TYPES[SET_IS_ONLINE]]: (state, { payload }) => payload
+```
 ### spreadPayloadToState
+```javascript
+const behaviors = {
+	[TYPES[PATCH_PROFIL]]: spreadPayloadToState,
+};
+```
+is equivalent to :
+```javascript
+const behaviors = {
+	[TYPES[PATCH_PROFIL]]: (state, { payload }) => ({
+	...state,
+	...payload,
+});
+```
+
+
+roadmap :
+
+- [ ] check if all dependencies are required or if a map is possible between externals packages and selected helpers from this package
+- [ ] create more helpers for reducers ( CRUD for collection )
