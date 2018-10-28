@@ -112,6 +112,7 @@ const middlewares = ['whatever middlewares you want'];
 
 export const { store, persistor, history } = createStore(rootReducer, middlewares = [], isReactNative = false);
 ```
+( note that middlewares and isReactNative are optionnal args which default values are indicated above )
 
 For now, redux-persist, redux-thunk are injected in any case, but you can still use only the store object from the function call.
 
