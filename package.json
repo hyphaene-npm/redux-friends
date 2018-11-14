@@ -5,6 +5,7 @@
 	"author": "Maximilien Garenne <maximilien.garenne@gmail.com>",
 	"license": "MIT",
 	"browser": "build/index.js",
+	"main": "build/index.js",
 	"scripts": {
 		"build": "NODE_ENV=dev rollup -c",
 		"prepublishOnly": "yarn build",
