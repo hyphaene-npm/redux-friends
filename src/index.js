@@ -4,6 +4,8 @@ import createStore from './create/createStore';
 import createTypes from './create/createTypes';
 
 import { PAGES, DATA } from './constants';
+import createMapDispatchToProps from './create/createMapDispatchToProps';
+import createMapStateToProps from './create/createMapStateToProps';
 
 import assignPayloadToKey from './handlePayload/assignPayloadToKey';
 import assignPayloadToState from './handlePayload/assignPayloadToState';
@@ -24,4 +26,6 @@ export {
 	addPayloadToState,
 	assignPayloadToNestedKey,
 	spreadPayloadToState,
+	createMapDispatchToProps,
+	createMapStateToProps,
 };
