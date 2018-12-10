@@ -196,7 +196,7 @@ const behaviors = {
 	[TYPES[SET_PROFIL_NAME]]: (state, { payload }) => ({
 	...state,
 	[PROFIL]: {
-		...state[key],
+		...state[PROFIL],
 		[NAME]: payload,
 	},
 });
