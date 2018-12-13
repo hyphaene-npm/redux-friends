@@ -3,7 +3,7 @@ import { createAction, createActionWithMeta } from './create/createAction';
 import createStore from './create/createStore';
 import createTypes from './create/createTypes';
 
-import { PAGES, DATA } from './constants';
+import { PAGES, DATA, PAGE_SIZE } from './constants';
 import createMapDispatchToProps from './create/createMapDispatchToProps';
 import createMapStateToProps from './create/createMapStateToProps';
 
@@ -21,6 +21,7 @@ export {
 	createTypes,
 	PAGES,
 	DATA,
+	PAGE_SIZE,
 	assignPayloadToKey,
 	assignPayloadToState,
 	addPayloadToState,
