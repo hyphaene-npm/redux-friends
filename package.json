@@ -1,6 +1,6 @@
 {
     "name": "redux-friends",
-    "version": "3.3.0",
+    "version": "3.4.0",
     "description": "a set of helpers / creators for redux",
     "author": "Maximilien Garenne <maximilien.garenne@gmail.com>",
     "license": "MIT",
