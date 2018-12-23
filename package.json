@@ -1,10 +1,11 @@
 {
     "name": "redux-friends",
-    "version": "3.0.5",
+    "version": "3.2.0",
     "description": "a set of helpers / creators for redux",
     "author": "Maximilien Garenne <maximilien.garenne@gmail.com>",
     "license": "MIT",
     "browser": "build/index.js",
+    "main": "build/index.js",
     "scripts": {
         "build": "NODE_ENV=dev rollup -c",
         "prepublishOnly": "yarn build",

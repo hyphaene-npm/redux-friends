@@ -77,7 +77,34 @@ setLoadedWithMeta with return :
 	type: 'injected type with createAction'
 });
 ```
+## mapStateToProps
 
+```javascript
+const mapStateToProps = createMapStateToProps({
+	formValues: getFormValues,
+	loginError: getLoginError,
+});
+```
+
+is equivalent to
+```javascript
+const mapStateToProps = state => ({
+	formValues: getFormValues(state),
+	loginError: getLoginError(state),
+});
+```
+
+## mapDispatchToProps
+
+```javascript
+export const mapDispatchToProps = createMapDispatchToProps({ onLogin: login });
+
+```
+is equivalent to
+```javascript
+export const mapDispatchToProps = dispatch => bindActionCreators({ onLogin: login }, dispatch);
+
+```
 
 
 ## Reducer
@@ -169,7 +196,7 @@ const behaviors = {
 	[TYPES[SET_PROFIL_NAME]]: (state, { payload }) => ({
 	...state,
 	[PROFIL]: {
-		...state[key],
+		...state[PROFIL],
 		[NAME]: payload,
 	},
 });

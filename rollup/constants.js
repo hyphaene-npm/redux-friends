@@ -46,8 +46,12 @@ export const external = [
 	reduxTypes,
 ];
 
-export const globals = external.reduce((acc, current) => {
-	acc[current] = current;
-	return acc;
-}, {});
+const createObjectWithKeyEqualValues = list =>
+	list.reduce((acc, current) => {
+		acc[current] = current;
+		return acc;
+	}, {});
+
+export const globals = createObjectWithKeyEqualValues(external);
+
 export const mainInput = 'src/index.js';
