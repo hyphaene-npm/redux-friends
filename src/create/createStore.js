@@ -15,7 +15,11 @@ const persistConfig = {
 
 const createStore = (
 	rootReducer,
-	{ customPersistConfig = {}, mmiddlewares = [], isReactNative = false }
+	{ customPersistConfig = {}, mmiddlewares = [], isReactNative = false } = {
+		customPersistConfig: {},
+		mmiddlewares: [],
+		isReactNative: false,
+	}
 ) => {
 	const history = createHistory();
 	const middlewares = [
