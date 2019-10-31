@@ -23,18 +23,16 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/hyphaene/redux-friends.git"
+		"url": "https://github.com/hyphaene-npm/redux-friends.git"
 	},
 	"files": [
 		"build"
 	],
 	"bugs": {
-		"url": "https://github.com/hyphaene/redux-friends/issues"
+		"url": "https://github.com/hyphaene-npm/redux-friends/issues"
 	},
-	"homepage": "https://github.com/hyphaene/redux-friends#readme",
-	"peerDependencies": {
-		"history": "^4.7.2",
-		"react-router-redux": "^4.0.8",
+	"homepage": "https://github.com/hyphaene-npm/redux-friends#readme",
+	"dependencies": {
 		"redux": "^4.0.1",
 		"redux-actions": "^2.6.1",
 		"redux-devtools-extension": "^2.13.5",
