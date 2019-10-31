@@ -1,7 +1,5 @@
 import { createStore as reduxCreateStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import createHistory from 'history/createHashHistory';
-import { routerMiddleware } from 'react-router-redux';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
@@ -15,26 +13,22 @@ const persistConfig = {
 
 const createStore = (
 	rootReducer,
-	{ customPersistConfig = {}, mmiddlewares = [], isReactNative = false } = {
+	{ needPersist = false, customPersistConfig = {}, mmiddlewares = [] } = {
 		customPersistConfig: {},
 		mmiddlewares: [],
-		isReactNative: false,
+		needPersist: false,
 	}
 ) => {
-	const history = createHistory();
-	const middlewares = [
-		...(isReactNative ? [] : routerMiddleware(history)),
-		thunk,
-		...mmiddlewares,
-	];
+	const middlewares = [thunk, ...mmiddlewares];
 
 	const store = reduxCreateStore(
-		persistReducer({ ...persistConfig, ...customPersistConfig }, rootReducer),
+		needPersist
+			? persistReducer({ ...persistConfig, ...customPersistConfig }, rootReducer)
+			: rootReducer,
 		composeWithDevTools(applyMiddleware(...middlewares))
 	);
 
-	const persistor = persistStore(store);
-	return { store, persistor, history };
+	return { store, ...(needPersist ? { persistor: persistStore(store) } : {}) };
 };
 
 export default createStore;
