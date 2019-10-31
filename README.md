@@ -55,26 +55,26 @@ in actions.js
 ```javascript
 import { createAction, createActionWithMeta } from 'redux-friends';
 import { SET_LOADED, SET_DATA, TYPES,LOADED, DATA} from './constants';
-// will return a function which accepts payload arg
+// will return a function which accepts a payload argument only
 export const setLoaded = createAction(TYPES[SET_LOADED]);
-// will return a function which accepts payload and meta arg
+// will return a function which accepts payload and meta arguments
 export const setLoadedWithMeta = createActionWithMeta(TYPES[SET_LOADED]);
 ```
 
-setLoaded with return :
+setLoaded will return :
 ```javascript
 payload => ({
 	payload:payload,
-	type: 'injected type with createAction'
+	type: '<injected type with createAction>'
 });
 ```
 
-setLoadedWithMeta with return :
+setLoadedWithMeta will return :
 ```javascript
  (payload, meta ) => ({
 	payload:payload,
 	meta:meta,
-	type: 'injected type with createAction'
+	type: '<injected type with createActionWithMeta>'
 });
 ```
 ## mapStateToProps
@@ -98,12 +98,10 @@ const mapStateToProps = state => ({
 
 ```javascript
 export const mapDispatchToProps = createMapDispatchToProps({ onLogin: login });
-
 ```
 is equivalent to
 ```javascript
 export const mapDispatchToProps = dispatch => bindActionCreators({ onLogin: login }, dispatch);
-
 ```
 
 
@@ -137,7 +135,7 @@ const isReactNative = !!'are you using RN ?'
 
 const middlewares = ['whatever middlewares you want'];
 
-export const { store, persistor, history } = createStore(rootReducer, middlewares = [], isReactNative = false);
+export const { store, persistor } = createStore(rootReducer, middlewares = [], isReactNative = false);
 ```
 ( note that middlewares and isReactNative are optionnal args which default values are indicated above )
 
