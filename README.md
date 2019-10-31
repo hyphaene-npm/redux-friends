@@ -5,7 +5,7 @@
 Redux-friends is a set of helpers designed to remove at its best the verbose part of redux use.
 It is therefore opiniated on the declaration part, by trying to let you declare only what you can't avoid.
 
-This package is designed to work with [reduxifire](https://www.npmjs.com/package/reduxifire) with I maintain too, a CLi to generate a redux folder based on this library.
+This package is designed to work with [reduxifire](https://www.npmjs.com/package/reduxifire) which I maintain too, a CLi to generate a redux folder based on this library's helpers.
 
 See below the example section for a redux implementation using redux-friends
 
@@ -27,7 +27,7 @@ In constants.js
 ```javascript
 import { createTypes } from 'redux-friends';
 
-export const REDUCER_KEY = 'someData'
+export const REDUCER_KEY = '<some key like forms>'
 // used in reducer , see below
 export const LOADED = 'loaded';
 export const DATA = 'data';
@@ -42,7 +42,7 @@ return an object of actions in the form
  { [ACTION_NAME]: `${REDUCER_KEY}/${ACTION_NAME}`}
  ```
 
-to target an action, we can declare
+to target an action (in the reducer part), or declare an action function ( through the createAction helpers), we can declare
 ```javascript
 TYPES[ACTION_NAME]
 ```
@@ -54,7 +54,7 @@ createTypes rests on redux-types, which I collabored on, and is included here to
 in actions.js
 ```javascript
 import { createAction, createActionWithMeta } from 'redux-friends';
-import { SET_LOADED, SET_DATA, TYPES,LOADED, DATA} from './constants';
+import { SET_LOADED, SET_DATA, TYPES, LOADED, DATA} from './constants';
 // will return a function which accepts a payload argument only
 export const setLoaded = createAction(TYPES[SET_LOADED]);
 // will return a function which accepts payload and meta arguments
@@ -64,7 +64,7 @@ export const setLoadedWithMeta = createActionWithMeta(TYPES[SET_LOADED]);
 setLoaded will return :
 ```javascript
 payload => ({
-	payload:payload,
+	payload: payload,
 	type: '<injected type with createAction>'
 });
 ```
@@ -72,8 +72,8 @@ payload => ({
 setLoadedWithMeta will return :
 ```javascript
  (payload, meta ) => ({
-	payload:payload,
-	meta:meta,
+	payload: payload,
+	meta: meta,
 	type: '<injected type with createActionWithMeta>'
 });
 ```
@@ -109,7 +109,7 @@ export const mapDispatchToProps = dispatch => bindActionCreators({ onLogin: logi
 
 ```javascript
 import { createReducer } from 'redux-friends';
-import { SET_LOADED, SET_DATA, TYPES,LOADED, DATA} from './constants';
+import { SET_LOADED, SET_DATA, TYPES, LOADED, DATA } from './constants';
 
 const defaultState = {};
 
@@ -123,7 +123,6 @@ const behaviors = {
 
 export default createReducer(behaviors, defaultState);
 ```
-
 
 ## Store
 
@@ -144,7 +143,7 @@ export const store = createStore(rootReducer, ?middlewares );
 ( note that middleware argument is optional argument )
 
 
-The second one embed redux-persist
+The second one embed redux-persist. Redux-persist being treated as external dependency in the lib, you'll have to install it on your project.
 
 ```javascript
 import createStore from 'redux-friends/build/createPersistedStore.js';
@@ -163,7 +162,9 @@ export const { store, persistor } = createStore(rootReducer, ?middlewares );
 
 ## Reducer Helpers
 
-Since reducers are often designed to manage the same data structures, here is a list of helpers to minimize the declaration part to achieve same goals :
+Since reducers are often designed to manage the same data structures, here is a list of helpers to minimize the declaration part to achieve same goals.
+
+I mostly design atomic reducers, where state is the value of the reducer key. ( yes that implies doing a massive use of combineReducers ^^, which is a good design in my opinion )
 
 ( equivalences in reducer behaviours)
 
@@ -245,5 +246,4 @@ const behaviors = {
 
 roadmap :
 
-- [ ] check if all dependencies are required or if a map is possible between externals packages and selected helpers from this package
 - [ ] create more helpers for reducers ( CRUD for collection )
