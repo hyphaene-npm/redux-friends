@@ -127,22 +127,38 @@ export default createReducer(behaviors, defaultState);
 
 ## Store
 
+There are two createStore exposed in this package.
+Both embed redux-devtools and redux-thunk middleware.
+
+The first : has only features described above.
+
 
 ```javascript
 import { createStore } from 'redux-friends';
 
-const isReactNative = !!'are you using RN ?'
 
 const middlewares = ['whatever middlewares you want'];
 
-export const { store, persistor } = createStore(rootReducer, middlewares = [], isReactNative = false);
+export const store = createStore(rootReducer, ?middlewares );
 ```
-( note that middlewares and isReactNative are optionnal args which default values are indicated above )
+( note that middleware argument is optional argument )
 
-For now, redux-persist, redux-thunk are injected in any case, but you can still use only the store object from the function call.
 
-PRs are welcome to remove this opiniated part as optionnal config
+The second one embed redux-persist
 
+```javascript
+import createStore from 'redux-friends/createPersistedStore.js';
+
+
+const middlewares = ['whatever middlewares you want'];
+
+export const { store, persistor } = createStore(rootReducer, ?middlewares );
+```
+( note that middleware argument is optional argument )
+
+:warning: In this case, createStore is the default export, so use default import ;)
+
+( the reason being that since this file relies on special dependencies that the rest of the lib does not require, it is treated as a separate bundling process, hence the import path )
 
 
 ## Reducer Helpers

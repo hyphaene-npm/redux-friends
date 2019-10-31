@@ -13,22 +13,19 @@ const persistConfig = {
 
 const createStore = (
 	rootReducer,
-	{ needPersist = false, customPersistConfig = {}, mmiddlewares = [] } = {
+	{ customPersistConfig = {}, mmiddlewares = [] } = {
 		customPersistConfig: {},
 		mmiddlewares: [],
-		needPersist: false,
 	}
 ) => {
 	const middlewares = [thunk, ...mmiddlewares];
 
 	const store = reduxCreateStore(
-		needPersist
-			? persistReducer({ ...persistConfig, ...customPersistConfig }, rootReducer)
-			: rootReducer,
+		persistReducer({ ...persistConfig, ...customPersistConfig }, rootReducer),
 		composeWithDevTools(applyMiddleware(...middlewares))
 	);
 
-	return { store, ...(needPersist ? { persistor: persistStore(store) } : {}) };
+	return { store, persistor: persistStore(store) };
 };
 
 export default createStore;
