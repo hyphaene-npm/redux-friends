@@ -1,10 +1,9 @@
-import pkg from './package.json';
-import { mainInput, persistInput } from './rollup/constants';
+import { mainInput, persistInput, persistOutputPath, outputPath } from './rollup/constants';
 import { setConfig, formatBuilder } from './rollup/utils';
 
 const jsExt = formatBuilder('umd');
-const mainOutput = [jsExt(pkg.main)];
-const persistOutput = [jsExt('build/createPersistedStore.js')];
+const mainOutput = [jsExt(outputPath)];
+const persistOutput = [jsExt(persistOutputPath)];
 const mainConfig = setConfig(mainInput, mainOutput);
 const persistConfig = setConfig(persistInput, persistOutput);
 

@@ -147,7 +147,7 @@ export const store = createStore(rootReducer, ?middlewares );
 The second one embed redux-persist
 
 ```javascript
-import createStore from 'redux-friends/createPersistedStore.js';
+import createStore from 'redux-friends/build/createPersistedStore.js';
 
 
 const middlewares = ['whatever middlewares you want'];

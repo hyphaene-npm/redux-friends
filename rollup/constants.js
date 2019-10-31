@@ -6,6 +6,7 @@ import filesize from 'rollup-plugin-filesize';
 import localResolve from 'rollup-plugin-local-resolve';
 // import { terser } from 'rollup-plugin-terser';
 // import typescript from 'rollup-plugin-typescript2';
+import pkg from '../package.json';
 
 export const plugins = [
 	peerDepsExternal(),
@@ -30,4 +31,7 @@ const createObjectWithKeyEqualValues = list =>
 export const globals = createObjectWithKeyEqualValues(externalIncludingPersist);
 
 export const mainInput = 'src/index.js';
-export const persistInput = 'src/create/createStoreWithPersist.js';
+export const persistInput = 'src/create/createPersistedStore.js';
+
+export const persistOutputPath = 'build/createPersistedStore.js';
+export const outputPath = pkg.main;
