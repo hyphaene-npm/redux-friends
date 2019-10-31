@@ -26,7 +26,8 @@
 		"url": "https://github.com/hyphaene-npm/redux-friends.git"
 	},
 	"files": [
-		"build"
+		"build",
+		"src"
 	],
 	"bugs": {
 		"url": "https://github.com/hyphaene-npm/redux-friends/issues"
