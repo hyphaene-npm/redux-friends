@@ -10,16 +10,16 @@ import localResolve from 'rollup-plugin-local-resolve';
 export const plugins = [
 	peerDepsExternal(),
 	babel({ exclude: 'node_modules/**' }),
-
-	babel({ exclude: 'node_modules/**' }),
 	localResolve(),
 	resolve(),
 	commonjs(),
 	filesize(),
 ];
 const redux = 'redux';
+const reduxPersist = 'redux-persist';
 
 export const external = [redux];
+export const externalIncludingPersist = [redux, reduxPersist];
 
 const createObjectWithKeyEqualValues = list =>
 	list.reduce((acc, current) => {
@@ -27,6 +27,7 @@ const createObjectWithKeyEqualValues = list =>
 		return acc;
 	}, {});
 
-export const globals = createObjectWithKeyEqualValues(external);
+export const globals = createObjectWithKeyEqualValues(externalIncludingPersist);
 
 export const mainInput = 'src/index.js';
+export const persistInput = 'src/create/createStoreWithPersist.js';
