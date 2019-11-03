@@ -8,10 +8,10 @@ import { PAGES, DATA, PAGE_SIZE } from './constants';
 import createMapDispatchToProps from './create/createMapDispatchToProps';
 import createMapStateToProps from './create/createMapStateToProps';
 
-import assignPayloadToKey from './handlePayload/assignPayloadToKey';
+import assignPayloadToStateKey from './handlePayload/assignPayloadToStateKey';
+import assignPayloadToNestedStateKey from './handlePayload/assignPayloadToNestedStateKey';
 import assignPayloadToState from './handlePayload/assignPayloadToState';
 import addPayloadToState from './handlePayload/addPayloadToState';
-import assignPayloadToNestedKey from './handlePayload/assignPayloadToNestedKey';
 import spreadPayloadToState from './handlePayload/spreadPayloadToState';
 
 export {
@@ -24,11 +24,11 @@ export {
 	PAGES,
 	DATA,
 	PAGE_SIZE,
-	assignPayloadToKey,
+	assignPayloadToStateKey,
 	assignPayloadToState,
 	addPayloadToState,
-	assignPayloadToNestedKey,
+	assignPayloadToNestedStateKey,
 	spreadPayloadToState,
 	createMapDispatchToProps,
-	createMapStateToProps,
+	createMapStateToProps
 };

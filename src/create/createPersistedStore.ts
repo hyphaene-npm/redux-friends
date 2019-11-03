@@ -12,7 +12,7 @@ const persistConfig = {
 };
 
 const createStore = (
-	rootReducer,
+	rootReducer: any,
 	{ customPersistConfig = {}, mmiddlewares = [] } = {
 		customPersistConfig: {},
 		mmiddlewares: [],

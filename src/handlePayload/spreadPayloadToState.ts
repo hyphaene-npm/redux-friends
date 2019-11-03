@@ -1,4 +1,4 @@
-const spreadPayloadToState = (state, { payload }) => ({
+const spreadPayloadToState = (state: {}, { payload }) => ({
 	...state,
 	...payload,
 });

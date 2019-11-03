@@ -1,19 +1,16 @@
-import babel from 'rollup-plugin-babel';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import filesize from 'rollup-plugin-filesize';
 import localResolve from 'rollup-plugin-local-resolve';
-// import { terser } from 'rollup-plugin-terser';
-// import typescript from 'rollup-plugin-typescript2';
+import typescript from 'rollup-plugin-typescript2';
+
 import pkg from '../package.json';
 
 export const plugins = [
-	peerDepsExternal(),
-	babel({ exclude: 'node_modules/**' }),
 	localResolve(),
 	resolve(),
 	commonjs(),
+	typescript({ tsconfig: 'tsconfig.json' }),
 	filesize(),
 ];
 const redux = 'redux';
@@ -30,8 +27,8 @@ const createObjectWithKeyEqualValues = list =>
 
 export const globals = createObjectWithKeyEqualValues(externalIncludingPersist);
 
-export const mainInput = 'src/index.js';
-export const persistInput = 'src/create/createPersistedStore.js';
+export const mainInput = 'src/index.ts';
+export const persistInput = 'src/create/createPersistedStore.ts';
 
-export const persistOutputPath = 'build/createPersistedStore.js';
+export const persistOutputPath = 'lib/createPersistedStore.js';
 export const outputPath = pkg.main;

@@ -12,4 +12,5 @@ export const formatBuilder = format => file => ({
 	format,
 	name: 'Hyphaene',
 	globals,
+	sourcemap: true,
 });

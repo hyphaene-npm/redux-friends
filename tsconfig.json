@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "ES2015",
+		"lib": ["esnext"],
+		"sourceMap": true,
+		"moduleResolution": "node",
+		"strictNullChecks": true,
+		"removeComments": true,
+		"declaration": true,
+		"outDir": "./built/lib/",
+		"declarationDir": "./built/t/",
+		"declarationMap": true,
+		"preserveWatchOutput": true,
+		"alwaysStrict": true,
+		"diagnostics": true,
+		"strict": true,
+		"noImplicitAny": false,
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+		"noImplicitThis": true,
+		"listFiles": true,
+		"pretty": true,
+		"noEmitOnError": false,
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitReturns": true
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules"]
+}

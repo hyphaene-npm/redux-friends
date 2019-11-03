@@ -66,10 +66,5 @@
 	"parserOptions": {
 		"ecmaVersion": 6,
 		"sourceType": "module"
-	},
-	"settings": {
-		"import/resolver": {
-			"webpack": {}
-		}
 	}
 }
