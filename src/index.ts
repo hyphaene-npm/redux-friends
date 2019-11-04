@@ -1,6 +1,6 @@
 import createReducer from './create/createReducer';
 import { createAction, createActionWithMeta } from './create/createAction';
-import createActions from './create/createActions';
+import { createSimpleActions, createOnDemandActions } from './create/createActions';
 import createStore from './create/createStore';
 import createTypes from './create/createTypes';
 
@@ -18,7 +18,8 @@ export {
 	createReducer,
 	createAction,
 	createActionWithMeta,
-	createActions,
+	createSimpleActions,
+	createOnDemandActions,
 	createStore,
 	createTypes,
 	PAGES,
@@ -30,5 +31,5 @@ export {
 	assignPayloadToNestedStateKey,
 	spreadPayloadToState,
 	createMapDispatchToProps,
-	createMapStateToProps
+	createMapStateToProps,
 };
