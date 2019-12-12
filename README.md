@@ -2,6 +2,8 @@
 
 # Purpose
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hyphaene-npm/redux-friends.svg)](https://greenkeeper.io/)
+
 Redux-friends is a set of helpers designed to remove at its best the verbose part of redux use.
 It is therefore opiniated on the declaration part, by trying to let you declare only what you can't avoid.
 
